@@ -9,6 +9,8 @@ schedule.json에서 오늘(한국 시간) 날짜의 게시물을 찾아 Instagra
   IG_USER_ID  인스타그램 계정 ID
   MODE        post(기본) | check  — check는 컨테이너만 만들어 보고 게시하지 않음
   CODE        특정 게시물 코드를 지정할 때 (예: V1111). 비우면 오늘 날짜 게시물
+
+게시물에 "type": "story" 가 있으면 피드가 아닌 스토리로 올린다 (사진마다 스토리 1장, 캡션 없음).
 """
 import json
 import os
@@ -78,6 +80,23 @@ def create_container(post):
     return c["id"]
 
 
+def publish_story(post):
+    """사진마다 스토리 컨테이너를 만들고, post 모드이면 순서대로 게시한다."""
+    ids = []
+    for name in post["images"]:
+        c = call("POST", f"{USER_ID}/media", {"image_url": IMG_BASE + name, "media_type": "STORIES"})
+        wait_ready(c["id"])
+        ids.append(c["id"])
+    if MODE == "check":
+        return None
+    published = []
+    for cid in ids:
+        res = call("POST", f"{USER_ID}/media_publish", {"creation_id": cid})
+        published.append(res["id"])
+        time.sleep(3)
+    return published
+
+
 def main():
     schedule = json.load(open("schedule.json", encoding="utf-8"))
     posted = json.load(open("posted.json", encoding="utf-8")) if os.path.exists("posted.json") else {}
@@ -98,6 +117,16 @@ def main():
             continue
         if post["code"] in posted and MODE == "post":
             print(f"{post['code']}: 이미 게시됨 ({posted[post['code']]['at']}) — 건너뜀")
+            continue
+        if post.get("type") == "story":
+            print(f"{post['code']}: 스토리 {len(post['images'])}장 컨테이너 생성")
+            ids = publish_story(post)
+            if ids is None:
+                print(f"{post['code']}: 점검 성공 (게시하지 않음)")
+                continue
+            posted[post["code"]] = {"at": datetime.now(KST).isoformat(timespec="minutes"), "type": "story", "media_ids": ids}
+            print(f"{post['code']}: 스토리 게시 완료 ({len(ids)}장)")
+            json.dump(posted, open("posted.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
             continue
         print(f"{post['code']}: 사진 {len(post['images'])}장 컨테이너 생성")
         cid = create_container(post)
