@@ -1,0 +1,32 @@
+name: fetch-assets
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "name=url pairs separated by spaces"
+        required: true
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: download
+        env:
+          URLS: ${{ inputs.urls }}
+        run: |
+          mkdir -p assets_in
+          for pair in $URLS; do
+            name="${pair%%=*}"; url="${pair#*=}"
+            case "$name" in *[!A-Za-z0-9._-]*) echo "bad name $name"; exit 1;; esac
+            curl -sSL --fail -o "assets_in/$name" "$url"
+            echo "$name $(stat -c %s assets_in/$name) bytes"
+          done
+      - name: commit
+        run: |
+          git config user.name "terrasse-bot"
+          git config user.email "terrasse-bot@users.noreply.github.com"
+          git add assets_in
+          git commit -m "fetch assets" || exit 0
+          git pull --rebase && git push
