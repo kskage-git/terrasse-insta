@@ -60,6 +60,18 @@ def wait_ready(container_id):
     raise SystemExit("컨테이너 준비 시간 초과")
 
 
+def publish(cid):
+    """게시. 인스타 쪽 처리가 덜 끝났다는 응답(2207027)이면 잠시 기다렸다 다시 시도한다."""
+    for i in range(6):
+        try:
+            return call("POST", f"{USER_ID}/media_publish", {"creation_id": cid})
+        except SystemExit as e:
+            if "2207027" not in str(e) or i == 5:
+                raise
+            print(f"아직 준비 중 — {20*(i+1)}초 후 다시 시도")
+            time.sleep(20 * (i + 1))
+
+
 def create_container(post):
     urls = [IMG_BASE + name for name in post["images"]]
     if len(urls) == 1:
@@ -91,7 +103,7 @@ def publish_story(post):
         return None
     published = []
     for cid in ids:
-        res = call("POST", f"{USER_ID}/media_publish", {"creation_id": cid})
+        res = publish(cid)
         published.append(res["id"])
         time.sleep(3)
     return published
@@ -133,7 +145,7 @@ def main():
         if MODE == "check":
             print(f"{post['code']}: 점검 성공 (게시하지 않음)")
             continue
-        res = call("POST", f"{USER_ID}/media_publish", {"creation_id": cid})
+        res = publish(cid)
         media_id = res["id"]
         link = call("GET", media_id, {"fields": "permalink"}).get("permalink", "")
         posted[post["code"]] = {"at": datetime.now(KST).isoformat(timespec="minutes"), "media_id": media_id, "permalink": link}
