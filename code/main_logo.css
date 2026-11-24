@@ -1,3 +1,11 @@
-/* main page: logo lockup with slogan */
-body._body_menu_m202611202ed147ca228c2 #text_w20261120000a1a378ae55 img{content:url(https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@dbf3d0559e3d64d29fe3296bbe2c069e61a1a41a/a/logo_lockup_green.png);width:186px!important;height:45px!important;position:relative;top:2px}
+/* main page: logo lockup with slogan + header spacing */
+body._body_menu_m202611202ed147ca228c2 #text_w20261120000a1a378ae55 img{content:url(https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@dbf3d0559e3d64d29fe3296bbe2c069e61a1a41a/a/logo_lockup_green.png);width:186px!important;height:45px!important}
 body._body_menu_m202611202ed147ca228c2 #s20261120697ae210bc992 img.normal_logo{content:url(https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@dbf3d0559e3d64d29fe3296bbe2c069e61a1a41a/a/logo_lockup_green.png);width:116px!important;height:28px!important;max-height:none!important}
+@media(min-width:768px){
+body._body_menu_m202611202ed147ca228c2 #s20261120fdcfa19f4e384 .inline-inside{padding:0 96px!important}
+body._body_menu_m202611202ed147ca228c2 #s20261120fdcfa19f4e384,body._body_menu_m202611202ed147ca228c2 #s20261120fdcfa19f4e384 .inline-inside,body._body_menu_m202611202ed147ca228c2 #s20261120fdcfa19f4e384 .inline-section,body._body_menu_m202611202ed147ca228c2 #s20261120fdcfa19f4e384 .inline-col-group-left,body._body_menu_m202611202ed147ca228c2 #s20261120fdcfa19f4e384 .inline-col-group-left .inline-col{height:92px!important}
+body._body_menu_m202611202ed147ca228c2 #s20261120fdcfa19f4e384 .inline-col-group-left .inline-col{display:flex!important;align-items:center}
+body._body_menu_m202611202ed147ca228c2 #s20261120fdcfa19f4e384 .inline-col-group-center{position:relative;top:-14px}
+body._body_menu_m202611202ed147ca228c2 #s20261120fdcfa19f4e384 .inline-col-group-right{position:relative;top:-10px}
+body._body_menu_m202611202ed147ca228c2 .trm{padding-top:28px}
+}
