@@ -1,0 +1,182 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body,#doz_body{background:#fff!important}
+.tpl.tps{font-family:'Quicksand','Noto Sans KR',sans-serif;font-weight:500;color:#26301F;background:#fff;line-height:1.45;max-width:1312px;margin:0 auto;padding:40px 0 24px}
+.tps *{box-sizing:border-box}.tps a{color:inherit;text-decoration:none}
+.tps img{width:100%;display:block;height:auto}
+.tps .ps-h1{font-size:28px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin:0}
+.tps .ps-lead{font-size:16px;color:#5b6152;margin:10px 0 0;max-width:560px}
+.tps .ps-nav{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 32px}
+.tps .ps-nav a{border:1px solid #26301F;border-radius:999px;padding:9px 18px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.tps .ps-nav a:hover{background:#26301F;color:#fff}
+.tps .ps-nav span{opacity:.55;margin-left:6px;font-weight:500}
+.tps .ps-hero{position:relative}
+.tps .ps-hero .ps-m{display:none}
+.tps .ps-cap{font-size:13px;color:#5b6152;margin-top:12px;letter-spacing:.02em}
+.tps .ps-col{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:112px;scroll-margin-top:90px}
+.tps .ps-col.ps-r .ps-img{order:2}
+.tps .ps-no{font-size:12px;letter-spacing:.16em;color:#8a8f82}
+.tps .ps-h2{font-size:24px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin:8px 0 0}
+.tps .ps-tag{font-size:16px;margin-top:6px}
+.tps .ps-desc{font-size:15px;line-height:1.65;color:#4a5043;margin:18px 0 0;max-width:470px}
+.tps .ps-meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2E4A20;margin-top:16px}
+.tps .ps-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.tps .ps-card .ps-ph{background:#F7F6F2;aspect-ratio:1/1;overflow:hidden}
+.tps .ps-card .ps-ph img{transition:transform .4s}
+.tps .ps-card:hover .ps-ph img{transform:scale(1.04)}
+.tps .ps-cn{font-size:13px;margin-top:8px;font-family:'Noto Sans KR','Quicksand',sans-serif;font-weight:500}
+.tps .ps-cp{font-size:12px;color:#5b6152;margin-top:2px}
+.tps .ps-more{display:inline-block;margin-top:28px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid #26301F;padding-bottom:2px}
+.tps .ps-band{margin-top:120px}
+.tps .ps-band .ps-row{display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-top:18px}
+.tps .ps-band .ps-row p{font-size:15px;color:#4a5043;margin:0;max-width:520px;line-height:1.6}
+.tps .ps-feat{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:96px}
+.tps .ps-feat div{border-top:1px solid #26301F;padding-top:14px;font-size:14px;line-height:1.55;color:#4a5043}
+.tps .ps-feat b{display:block;color:#26301F;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;margin-bottom:6px}
+.tps .ps-duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:96px}
+.tps .ps-duo .ps-h3{font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-top:14px}
+.tps .ps-duo p{font-size:14px;color:#5b6152;margin:4px 0 0}
+.tps .ps-pro{background:#2E4A20;color:#F7F6F2;padding:56px 64px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-top:104px;align-items:end}
+.tps .ps-pro .ps-h2{color:#F7F6F2;margin:0}
+.tps .ps-pro p{font-size:16px;line-height:1.6;margin:16px 0 0;color:#e6e8df}
+.tps .ps-pro ul{list-style:none;padding:0;margin:0;font-size:14px;line-height:1.5}
+.tps .ps-pro li{border-top:1px solid rgba(247,246,242,.35);padding:12px 0}
+.tps .ps-btn{display:inline-block;border:1px solid #F7F6F2;padding:12px 22px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin:24px 10px 0 0;color:#F7F6F2}
+.tps .ps-btn.ps-f{background:#F7F6F2;color:#2E4A20}
+@media(max-width:767px){
+.tpl.tps{padding:24px 20px 8px}
+.tps .ps-h1{font-size:22px}.tps .ps-lead{font-size:14px}
+.tps .ps-nav{gap:8px;margin:20px 0 22px}.tps .ps-nav a{padding:8px 13px;font-size:11px}
+.tps .ps-hero .ps-p{display:none}.tps .ps-hero .ps-m{display:block}
+.tps .ps-col{grid-template-columns:1fr;gap:22px;margin-top:72px}
+.tps .ps-col.ps-r .ps-img{order:0}
+.tps .ps-h2{font-size:20px}.tps .ps-desc{font-size:14px}
+.tps .ps-cards{grid-template-columns:repeat(2,1fr);gap:16px 10px}
+.tps .ps-band{margin-top:80px}.tps .ps-band .ps-row{flex-direction:column;gap:12px}
+.tps .ps-feat{grid-template-columns:1fr;gap:18px;margin-top:64px}
+.tps .ps-duo{grid-template-columns:1fr;gap:36px;margin-top:64px}
+.tps .ps-pro{grid-template-columns:1fr;padding:40px 22px;gap:24px;margin-top:72px}
+}
+</style>
+<div class="tpl tps">
+
+<h1 class="ps-h1">Products /</h1>
+<p class="ps-lead">Melamine tableware and planters in everyday colour, made in our own factory in Korea.</p>
+<nav class="ps-nav">
+<a href="#ps-vintage">Vintage<span>17</span></a>
+<a href="#ps-blumen">Blumen<span>17</span></a>
+<a href="#ps-tree">Tree<span>8</span></a>
+<a href="#ps-planter">Planter<span>9</span></a>
+</nav>
+
+<div class="ps-hero">
+<img class="ps-p" src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/pp_hero.jpg" alt="Terrasse Vintage plates on a round table">
+<img class="ps-m" src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/pp_hero_m.jpg" alt="Terrasse Vintage plates on a round table">
+<div class="ps-cap">Vintage dinner plate, oval plates and sauce bowls</div>
+</div>
+
+<section class="ps-col" id="ps-vintage">
+<a class="ps-img" href="/vintage"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/pp_vintage.jpg" alt="Vintage collection" loading="lazy"></a>
+<div>
+<div class="ps-no">01</div>
+<h2 class="ps-h2">Vintage /</h2>
+<div class="ps-tag">Colours picked one by one</div>
+<p class="ps-desc">Solid colour plates, bowls, cups and trays in soft, sunlit tones. Every piece is made to be mixed, so a table can change with the day.</p>
+<div class="ps-meta">17 pieces · from ₩2,200</div>
+<div class="ps-cards">
+<a class="ps-card" href="/shop_view/?idx=63"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/a39782f3e6007.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">디저트 접시</div><div class="ps-cp">₩5,900부터</div></a>
+<a class="ps-card" href="/shop_view/?idx=64"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/3915fa5a91ccd.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">디너접시</div><div class="ps-cp">₩8,400</div></a>
+<a class="ps-card" href="/shop_view/?idx=68"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/e7489bd0e8154.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">오발</div><div class="ps-cp">₩7,600부터</div></a>
+<a class="ps-card" href="/shop_view/?idx=74"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/a22b54e15e61c.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">소스볼</div><div class="ps-cp">₩2,200부터</div></a>
+</div>
+<a class="ps-more" href="/vintage">Shop Vintage</a>
+</div>
+</section>
+
+<section class="ps-col ps-r" id="ps-blumen">
+<a class="ps-img" href="/blumen"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/pp_blumen.jpg" alt="Blumen collection" loading="lazy"></a>
+<div>
+<div class="ps-no">02</div>
+<h2 class="ps-h2">Blumen /</h2>
+<div class="ps-tag">Flowers in full bloom</div>
+<p class="ps-desc">Speckled patterns in bold colour pairings, like a garden in full bloom. Plates, bowls, trays and small pieces that bring energy to the table.</p>
+<div class="ps-meta">17 pieces · from ₩2,000</div>
+<div class="ps-cards">
+<a class="ps-card" href="/shop_view/?idx=80"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/7b84125bc4466.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">디저트 접시</div><div class="ps-cp">₩8,200부터</div></a>
+<a class="ps-card" href="/shop_view/?idx=83"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/1c7c8d94a545d.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">볼</div><div class="ps-cp">₩8,400부터</div></a>
+<a class="ps-card" href="/shop_view/?idx=91"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/7eff1f2dd127f.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">4칸 식판</div><div class="ps-cp">₩15,900</div></a>
+<a class="ps-card" href="/shop_view/?idx=93"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/e79d8c24dcb09.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">오발트레이210</div><div class="ps-cp">₩7,900</div></a>
+</div>
+<a class="ps-more" href="/blumen">Shop Blumen</a>
+</div>
+</section>
+
+<section class="ps-col" id="ps-tree">
+<a class="ps-img" href="/tree"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/pp_tree.jpg" alt="Tree collection" loading="lazy"></a>
+<div>
+<div class="ps-no">03</div>
+<h2 class="ps-h2">Tree /</h2>
+<div class="ps-tag">Where flowers take root</div>
+<p class="ps-desc">Calm speckled tones in milk, mint and banana. Trays, bowls and coasters that sit quietly on the counter and stack neatly away.</p>
+<div class="ps-meta">8 pieces · from ₩4,200</div>
+<div class="ps-cards">
+<a class="ps-card" href="/shop_view/?idx=104"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/8161c28fc8e01.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">볼140</div><div class="ps-cp">₩9,000</div></a>
+<a class="ps-card" href="/shop_view/?idx=97"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/cc3dc2c58d652.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">트레이</div><div class="ps-cp">₩10,000부터</div></a>
+<a class="ps-card" href="/shop_view/?idx=100"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/f1e7d54bea15c.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">딥트레이</div><div class="ps-cp">₩16,000부터</div></a>
+<a class="ps-card" href="/shop_view/?idx=103"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/4af5ff00cd4ea.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">코스터</div><div class="ps-cp">₩4,200</div></a>
+</div>
+<a class="ps-more" href="/tree">Shop Tree</a>
+</div>
+</section>
+
+<section class="ps-col ps-r" id="ps-planter">
+<a class="ps-img" href="/planter"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/pp_planter.jpg" alt="Planter collection" loading="lazy"></a>
+<div>
+<div class="ps-no">04</div>
+<h2 class="ps-h2">Planter /</h2>
+<div class="ps-tag">Pots that bloom again</div>
+<p class="ps-desc">Rund, RMC and Tree planters in the same colours as the tableware, with matching saucers. Sold on their own or as a set.</p>
+<div class="ps-meta">9 pieces · from ₩2,000</div>
+<div class="ps-cards">
+<a class="ps-card" href="/shop_view/?idx=107"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/12e0f67cbefdf.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">룬트 화분</div><div class="ps-cp">₩10,000부터</div></a>
+<a class="ps-card" href="/shop_view/?idx=105"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/3f6d08b19d1d2.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">RMC 화분</div><div class="ps-cp">₩9,000부터</div></a>
+<a class="ps-card" href="/shop_view/?idx=113"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/df2e1be8126f8.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">트리 화분</div><div class="ps-cp">₩9,000부터</div></a>
+<a class="ps-card" href="/shop_view/?idx=109"><div class="ps-ph"><img src="https://cdn-optimized.imweb.me/upload/S20261120113a7ae7d4e12/da61ae2eb06f4.jpg?w=400" alt="" loading="lazy"></div><div class="ps-cn">RMC 화분 + 받침 세트</div><div class="ps-cp">₩13,000부터</div></a>
+</div>
+<a class="ps-more" href="/planter">Shop Planter</a>
+</div>
+</section>
+
+<section class="ps-band">
+<img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/pp_colours.jpg" alt="Stacked Vintage plates in many colours" loading="lazy">
+<div class="ps-row">
+<h2 class="ps-h2">Mix, stack, repeat /</h2>
+<p>Colours and patterns are made to be mixed across the range, then stacked away neatly after dinner.</p>
+</div>
+</section>
+
+<section class="ps-feat">
+<div><b>Made in Korea</b>Designed and produced in our own factory since 2018.</div>
+<div><b>Shatter-resistant melamine</b>Light, sturdy and made for daily use.</div>
+<div><b>Dishwasher safe</b>Easy to care for, every day.</div>
+</section>
+
+<section class="ps-duo">
+<a href="/stories"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/pp_story1.jpg" alt="Tree trays and cups by the kitchen window" loading="lazy"><div class="ps-h3">By the kitchen window /</div><p>Tree trays and cups for a slow morning</p></a>
+<a href="/stories"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/pp_story2.jpg" alt="Blumen bowls, plates and planter" loading="lazy"><div class="ps-h3">Colour on colour /</div><p>Blumen bowls, plates and planters together</p></a>
+</section>
+
+<section class="ps-pro">
+<div>
+<h2 class="ps-h2">For professionals /</h2>
+<p>For department stores, select shops, cafés and hotels. Ask us about wholesale prices, minimum order quantities and lead times.</p>
+<a class="ps-btn ps-f" href="/professionals">Wholesale enquiry</a><a class="ps-btn" href="/professionals">Download catalogue</a>
+</div>
+<ul>
+<li>51 products across four collections</li>
+<li>Own factory in Korea since 2018</li>
+<li>Seoul Design Festival · 26–29 Nov 2026 · COEX Hall A, Booth G13</li>
+</ul>
+</section>
+
+</div>
