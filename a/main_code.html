@@ -1,53 +1,55 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
 <style>
+body,#doz_body{background:#F7F6F2!important}
+
 .trm{font-family:'Quicksand','Noto Sans KR',sans-serif;font-weight:500;color:#26301F;background:#F7F6F2;line-height:1.4}
 .trm *{box-sizing:border-box}.trm a{color:inherit;text-decoration:none}
 .trm img{width:100%;display:block;height:auto}
-.trm .cap{font-size:16px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin:16px 0 0}
-.trm .sub{font-size:14px;color:#5b6152;margin-top:4px}
-.trm .more{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid #26301F;padding-bottom:2px;white-space:nowrap}
-.trm .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
-.trm .h2{font-size:22px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin:0}
-.trm .sec{margin-top:96px}.trm .head{margin-bottom:28px}
-.trm .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.trm .g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.trm .tag{font-size:11px;letter-spacing:.14em;color:#2E4A20;margin-top:14px;text-transform:uppercase}
-.trm .pn{font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
-.trm .price{font-size:14px;margin-top:6px}
-.trm .about{display:grid;grid-template-columns:1fr 1fr;gap:64px;border-top:1px solid #d9d8d2;padding-top:56px}
-.trm .about p{font-size:20px;line-height:1.6;margin:0}
-.trm .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-content:start}
-.trm .feat div{border-top:1px solid #26301F;padding-top:14px;font-size:14px;line-height:1.5}
-.trm .feat b{display:block;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;margin-bottom:6px}
-.trm .pro{background:#2E4A20;color:#F7F6F2;padding:56px 64px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-top:96px}
-.trm .pro .h2{color:#F7F6F2}.trm .pro p{font-size:16px;line-height:1.6;margin:18px 0 26px;color:#e6e8df}
-.trm .btn{display:inline-block;border:1px solid #F7F6F2;padding:12px 22px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin:0 10px 10px 0;color:#F7F6F2}
-.trm .btn.f{background:#F7F6F2;color:#2E4A20}
-.trm .ev div{border-top:1px solid rgba(247,246,242,.4);padding:16px 0;font-size:15px;line-height:1.5}
-.trm .ev b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.8;font-weight:600}
-.trm .ig{text-align:center;padding:72px 0 24px}.trm .ig .t{font-size:13px;letter-spacing:.16em;text-transform:uppercase}.trm .ig .l{font-size:26px;font-weight:600;margin-top:10px}
-.trm .hm{display:none}
-@media(max-width:767px){.trm .g4{grid-template-columns:1fr 1fr;gap:28px 12px}.trm .g2{grid-template-columns:1fr;gap:40px}.trm .sec{margin-top:64px}.trm .about{grid-template-columns:1fr;gap:32px}.trm .about p{font-size:17px}.trm .feat{grid-template-columns:1fr}.trm .pro{grid-template-columns:1fr;padding:40px 20px;margin-top:64px}.trm .cap{font-size:14px}.trm .sub{font-size:13px}.trm .h2{font-size:18px}.trm .hp{display:none}.trm .hm{display:block}.trm .hero .row{flex-direction:column;align-items:flex-start}}
+.trm .tr-cap{font-size:16px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin:16px 0 0}
+.trm .tr-sub{font-size:14px;color:#5b6152;margin-top:4px}
+.trm .tr-more{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid #26301F;padding-bottom:2px;white-space:nowrap}
+.trm .tr-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.trm .tr-h2{font-size:22px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin:0}
+.trm .tr-sec{margin-top:96px}.trm .tr-head{margin-bottom:28px}
+.trm .tr-g4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.trm .tr-g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.trm .tr-tag{font-size:11px;letter-spacing:.14em;color:#2E4A20;margin-top:14px;text-transform:uppercase}
+.trm .tr-pn{font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
+.trm .tr-price{font-size:14px;margin-top:6px}
+.trm .tr-about{display:grid;grid-template-columns:1fr 1fr;gap:64px;border-top:1px solid #d9d8d2;padding-top:56px}
+.trm .tr-about p{font-size:20px;line-height:1.6;margin:0}
+.trm .tr-feat{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-content:start}
+.trm .tr-feat div{border-top:1px solid #26301F;padding-top:14px;font-size:14px;line-height:1.5}
+.trm .tr-feat b{display:block;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;margin-bottom:6px}
+.trm .tr-pro{background:#2E4A20;color:#F7F6F2;padding:56px 64px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-top:96px}
+.trm .tr-pro .tr-h2{color:#F7F6F2}.trm .tr-pro p{font-size:16px;line-height:1.6;margin:18px 0 26px;color:#e6e8df}
+.trm .tr-btn{display:inline-block;border:1px solid #F7F6F2;padding:12px 22px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin:0 10px 10px 0;color:#F7F6F2}
+.trm .tr-btn.tr-f{background:#F7F6F2;color:#2E4A20}
+.trm .tr-ev div{border-top:1px solid rgba(247,246,242,.4);padding:16px 0;font-size:15px;line-height:1.5}
+.trm .tr-ev b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.8;font-weight:600}
+.trm .tr-ig{text-align:center;padding:72px 0 24px}.trm .tr-ig .tr-t{font-size:13px;letter-spacing:.16em;text-transform:uppercase}.trm .tr-ig .tr-l{font-size:26px;font-weight:600;margin-top:10px}
+.trm .tr-hm{display:none}
+@media(max-width:767px){.trm .tr-g4{grid-template-columns:1fr 1fr;gap:28px 12px}.trm .tr-g2{grid-template-columns:1fr;gap:40px}.trm .tr-sec{margin-top:64px}.trm .tr-about{grid-template-columns:1fr;gap:32px}.trm .tr-about p{font-size:17px}.trm .tr-feat{grid-template-columns:1fr}.trm .tr-pro{grid-template-columns:1fr;padding:40px 20px;margin-top:64px}.trm .tr-cap{font-size:14px}.trm .tr-sub{font-size:13px}.trm .tr-h2{font-size:18px}.trm .tr-hp{display:none}.trm .tr-hm{display:block}.trm .tr-hero .tr-row{flex-direction:column;align-items:flex-start}}
 </style>
 <div class="trm">
-<div class="hero"><a href="/shop"><img class="hp" src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/01_hero_pc.jpg" alt="Terrasse tableware on a round table by the window"><img class="hm" src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/02_hero_mobile.jpg" alt="Terrasse tableware on a round table"></a>
-<div class="row"><div><p class="cap">Gentle blooms for every day /</p><div class="sub">A little terrace, by your side every day</div></div><a class="more" href="/shop" style="margin-top:16px">Shop all</a></div></div>
-<div class="sec"><div class="row head"><p class="h2">Collections</p></div><div class="g4">
-<a href="/vintage"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/03_cat_vintage.jpg" alt="Vintage"><p class="cap">Vintage /</p><div class="sub">Colours picked one by one</div></a>
-<a href="/blumen"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/04_cat_blumen.jpg" alt="Blumen"><p class="cap">Blumen /</p><div class="sub">Flowers in full bloom</div></a>
-<a href="/tree"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/05_cat_tree.jpg" alt="Tree"><p class="cap">Tree /</p><div class="sub">Where flowers take root</div></a>
-<a href="/planter"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/06_cat_pot.jpg" alt="Planter"><p class="cap">Planter /</p><div class="sub">Pots that bloom again</div></a></div></div>
-<div class="sec"><div class="row head"><p class="h2">New in</p><a class="more" href="/new-in">View all</a></div><div class="g4">
-<a href="/shop_view/?idx=63"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/p1_vintage_dessert.jpg" alt="Vintage Dessert Plate"><div class="tag">Vintage</div><div class="pn">Dessert Plate</div><div class="price">from ₩5,900</div></a>
-<a href="/shop_view/?idx=83"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/p2_blumen_bowl.jpg" alt="Blumen Bowl"><div class="tag">Blumen</div><div class="pn">Bowl</div><div class="price">from ₩8,400</div></a>
-<a href="/shop_view/?idx=104"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/p3_tree_bowl.jpg" alt="Tree Bowl 140"><div class="tag">Tree</div><div class="pn">Bowl 140</div><div class="price">₩9,000</div></a>
-<a href="/shop_view/?idx=107"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/p4_rund.jpg" alt="Rund Planter"><div class="tag">Planter</div><div class="pn">Rund Planter</div><div class="price">from ₩10,000</div></a></div></div>
-<div class="sec about"><p>Terrasse is a little terrace in everyday life — the space between indoors and out, where sunlight falls and flowers bloom. We make tableware and homeware in colours meant to be picked up and used, every day.</p>
-<div class="feat"><div><b>Made in Korea</b>In our own factory since 2018</div><div><b>Everyday tough</b>Shatter-resistant melamine</div><div><b>Easy care</b>Dishwasher safe</div></div></div>
-<div class="sec"><div class="row head"><p class="h2">Stories</p><a class="more" href="/stories">All stories</a></div><div class="g2">
-<a href="/stories"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/07_story_table.jpg" alt="Vintage plates on a round table"><p class="cap">Colour of the day /</p><div class="sub">Colours that bloom on the table</div></a>
-<a href="/stories"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/08_story_kitchen.jpg" alt="Tree bowls and trays in a kitchen by the window"><p class="cap">Afternoon by the window /</p><div class="sub">A little touch of colour, every day</div></a></div></div>
-<div class="pro"><div><p class="h2">For professionals</p><p>Retailers, department stores and buyers — we would love to hear from you. Ask us about wholesale, stockist partnerships and our 2027 catalogue.</p><a class="btn f" href="/professionals">Wholesale enquiry</a><a class="btn" href="/professionals">Download catalogue (EN, PDF)</a></div>
-<div class="ev"><div><b>Seoul Design Festival</b>26 – 29 Nov 2026 · COEX Hall A, Booth G13</div><div><b>Home Table Deco Fair</b>17 – 20 Dec 2026</div></div></div>
-<div class="ig"><a href="https://www.instagram.com/terrasse.official/" target="_blank"><div class="t">Follow us</div><div class="l">@terrasse.official</div></a></div>
+<div class="tr-hero"><a href="/shop"><img class="tr-hp" src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/01_hero_pc.jpg" alt="Terrasse tableware on a round table by the window"><img class="tr-hm" src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/02_hero_mobile.jpg" alt="Terrasse tableware on a round table"></a>
+<div class="tr-row"><div><p class="tr-cap">Gentle blooms for every day /</p><div class="tr-sub">A little terrace, by your side every day</div></div><a class="tr-more" href="/shop" style="margin-top:16px">Shop all</a></div></div>
+<div class="tr-sec"><div class="tr-row tr-head"><p class="tr-h2">Collections</p></div><div class="tr-g4">
+<a href="/vintage"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/03_cat_vintage.jpg" alt="Vintage"><p class="tr-cap">Vintage /</p><div class="tr-sub">Colours picked one by one</div></a>
+<a href="/blumen"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/04_cat_blumen.jpg" alt="Blumen"><p class="tr-cap">Blumen /</p><div class="tr-sub">Flowers in full bloom</div></a>
+<a href="/tree"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/05_cat_tree.jpg" alt="Tree"><p class="tr-cap">Tree /</p><div class="tr-sub">Where flowers take root</div></a>
+<a href="/planter"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/06_cat_pot.jpg" alt="Planter"><p class="tr-cap">Planter /</p><div class="tr-sub">Pots that bloom again</div></a></div></div>
+<div class="tr-sec"><div class="tr-row tr-head"><p class="tr-h2">New in</p><a class="tr-more" href="/new-in">View all</a></div><div class="tr-g4">
+<a href="/shop_view/?idx=63"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/p1_vintage_dessert.jpg" alt="Vintage Dessert Plate"><div class="tr-tag">Vintage</div><div class="tr-pn">Dessert Plate</div><div class="tr-price">from ₩5,900</div></a>
+<a href="/shop_view/?idx=83"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/p2_blumen_bowl.jpg" alt="Blumen Bowl"><div class="tr-tag">Blumen</div><div class="tr-pn">Bowl</div><div class="tr-price">from ₩8,400</div></a>
+<a href="/shop_view/?idx=104"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/p3_tree_bowl.jpg" alt="Tree Bowl 140"><div class="tr-tag">Tree</div><div class="tr-pn">Bowl 140</div><div class="tr-price">₩9,000</div></a>
+<a href="/shop_view/?idx=107"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/p4_rund.jpg" alt="Rund Planter"><div class="tr-tag">Planter</div><div class="tr-pn">Rund Planter</div><div class="tr-price">from ₩10,000</div></a></div></div>
+<div class="tr-sec tr-about"><p>Terrasse is a little terrace in everyday life — the space between indoors and out, where sunlight falls and flowers bloom. We make tableware and homeware in colours meant to be picked up and used, every day.</p>
+<div class="tr-feat"><div><b>Made in Korea</b>In our own factory since 2018</div><div><b>Everyday tough</b>Shatter-resistant melamine</div><div><b>Easy care</b>Dishwasher safe</div></div></div>
+<div class="tr-sec"><div class="tr-row tr-head"><p class="tr-h2">Stories</p><a class="tr-more" href="/stories">All stories</a></div><div class="tr-g2">
+<a href="/stories"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/07_story_table.jpg" alt="Vintage plates on a round table"><p class="tr-cap">Colour of the day /</p><div class="tr-sub">Colours that bloom on the table</div></a>
+<a href="/stories"><img src="https://cdn.jsdelivr.net/gh/kskage-git/terrasse-insta@site-assets/a/08_story_kitchen.jpg" alt="Tree bowls and trays in a kitchen by the window"><p class="tr-cap">Afternoon by the window /</p><div class="tr-sub">A little touch of colour, every day</div></a></div></div>
+<div class="tr-pro"><div><p class="tr-h2">For professionals</p><p>Retailers, department stores and buyers — we would love to hear from you. Ask us about wholesale, stockist partnerships and our 2027 catalogue.</p><a class="tr-btn tr-f" href="/professionals">Wholesale enquiry</a><a class="tr-btn" href="/professionals">Download catalogue (EN, PDF)</a></div>
+<div class="tr-ev"><div><b>Seoul Design Festival</b>26 – 29 Nov 2026 · COEX Hall A, Booth G13</div><div><b>Home Table Deco Fair</b>17 – 20 Dec 2026</div></div></div>
+<div class="tr-ig"><a href="https://www.instagram.com/terrasse.official/" target="_blank"><div class="tr-t">Follow us</div><div class="tr-l">@terrasse.official</div></a></div>
 </div>
